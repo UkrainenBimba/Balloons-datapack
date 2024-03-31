@@ -1,0 +1,1 @@
+$particle item ghast_spawn_egg[minecraft:custom_model_data=$(custom_model_data)] ~ ~.5 ~ 0.25 0.25 0.25 0.125 15

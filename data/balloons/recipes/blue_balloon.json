@@ -1,0 +1,45 @@
+{  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+    "pattern": [
+        " # ",
+        "PWP",
+        " S "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blue_dye"
+        },
+        "P": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "W": {
+            "item": "minecraft:wind_charge"
+        },
+        "S": {
+            "item": "minecraft:string"
+        }
+    },
+    "result": {
+        "id": "minecraft:ghast_spawn_egg",
+        "components": {
+            "minecraft:custom_data": {
+                "balloon": 1
+            },
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "Tags": ["balloon.spawn"],
+                "data":{"color":3949738, "custom_model_data": 202413}
+            },
+            "minecraft:custom_model_data": 202413,
+            "minecraft:custom_name": "{\"translate\":\"balloons.blue_balloon\",\"fallback\":\"blue Balloon\",\"italic\":false}",
+            "minecraft:lore": [
+                "''",
+                "{\"translate\":\"balloons.when_leashed\",\"fallback\":\"When Leashed to Player:\",\"italic\":false,\"color\":\"gray\"}",
+                "[{\"text\":\"+0.01 \", \"italic\": false, \"color\": \"blue\"},{\"translate\":\"attribute.name.generic.gravity\",\"fallback\":\"Gravity\",\"italic\":false,\"color\":\"blue\"}]",
+                "[{\"text\":\"+5 \", \"italic\": false, \"color\": \"blue\"},{\"translate\":\"attribute.name.generic.safe_fall_distance\",\"fallback\":\"Safe Fall Distance\",\"italic\":false,\"color\":\"blue\"}]",
+                "[{\"text\":\"-0.05 \", \"italic\": false, \"color\": \"blue\"},{\"translate\":\"attribute.name.generic.fall_damage_multiplier\",\"fallback\":\"Fall Damage Multiplier\",\"italic\":false,\"color\":\"blue\"}]"
+            ]
+        },
+        "count": 1
+    }
+}

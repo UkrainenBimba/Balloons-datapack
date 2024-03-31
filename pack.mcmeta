@@ -1,0 +1,14 @@
+{
+    "pack": {
+        "pack_format": 37,
+        "description": {
+            "text": "Made by Bimba",
+            "color": "gold"
+        }
+    },
+    "features": {
+      "enabled": [
+        "update_1_21"
+      ]
+    }
+}

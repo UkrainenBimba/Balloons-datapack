@@ -1,0 +1,36 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:ghast_spawn_egg",
+        "components": {
+          "minecraft:custom_model_data": 202406
+        }
+      },
+      "title": {
+        "translate": "balloons.advancements.yes_it_is_a_balloon"
+      },
+      "description": {
+        "translate": "balloons.advancements.yes_it_is_a_balloon.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true
+    },
+    "parent": "minecraft:adventure/root",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": "minecraft:ghast_spawn_egg",
+              "predicates": {
+                "minecraft:custom_data": "{balloon:1b}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,21 @@
+{
+    "values": [
+        "air",
+        "cave_air",
+        "void_air",
+        "light",
+        "lava",
+        "water",
+        "glow_lichen",
+        "torch",
+        "soul_torch",
+        "redstone_torch",
+        "redstone_wire",
+        "#buttons",
+        "lever",
+        "#pressure_plates",
+        "tripwire",
+        "moss_carpet",
+        "snow"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:saddle"
+      },
+      "title": {
+        "translate": "balloons.advancements.when_pigs_really_fly"
+      },
+      "description": {
+        "translate": "balloons.advancements.when_pigs_really_fly.desc"
+      },
+      "frame": "goal",
+      "show_toast": true,
+      "announce_to_chat": true
+    },
+    "parent": "balloons:yes_it_is_a_balloon",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

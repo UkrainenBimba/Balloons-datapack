@@ -1,0 +1,35 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": "minecraft:wind_charge"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "recipes": [
+        "balloons:white_balloon",
+        "balloons:light_gray_balloon",
+        "balloons:gray_balloon",
+        "balloons:black_balloon",
+        "balloons:brown_balloon",
+        "balloons:red_balloon",
+        "balloons:orange_balloon",
+        "balloons:yellow_balloon",
+        "balloons:lime_balloon",
+        "balloons:green_balloon",
+        "balloons:cyan_balloon",
+        "balloons:light_blue_balloon",
+        "balloons:blue_balloon",
+        "balloons:purple_balloon",
+        "balloons:magenta_balloon",
+        "balloons:pink_balloon"
+      ]
+    }
+  }
+  

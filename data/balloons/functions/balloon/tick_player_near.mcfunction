@@ -1,0 +1,6 @@
+execute as @e[type=slime,tag=save.slime,limit=1] on passengers if entity @s[type=interaction,tag=balloon.interact] if data entity @s attack as @e[type=pig,tag=save.balloon,distance=..8] at @s run function balloons:balloon/kill
+
+#all kinds of interaction a player with balloon
+execute if entity @s[tag=!leashed,tag=!interacted] as @e[type=slime,tag=save.slime,limit=1] on passengers if entity @s[type=interaction,tag=balloon.interact] if data entity @s interaction as @e[type=pig,tag=save.balloon,distance=..8] at @s run function balloons:balloon/leash
+execute if entity @s[tag=leashed,tag=!interacted] as @e[type=slime,tag=save.slime,limit=1] if data entity @s leash.UUID on passengers if entity @s[type=interaction,tag=balloon.interact] if data entity @s interaction as @e[type=pig,tag=save.balloon,distance=..8] at @s run function balloons:balloon/unleash
+execute if entity @s[tag=leashed,tag=!interacted] as @e[type=slime,tag=save.slime,limit=1] unless data entity @s leash.UUID on passengers if entity @s[type=interaction,tag=balloon.interact] if data entity @s interaction as @e[type=pig,tag=save.balloon,distance=..8] at @s run function balloons:balloon/leash2

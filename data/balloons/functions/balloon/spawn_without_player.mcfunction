@@ -1,0 +1,14 @@
+summon slime ~ ~ ~ {Silent:1b,active_effects:[{id:"minecraft:invisibility",show_particles:false,duration:-1,amplifier:0},{id:"minecraft:resistance",show_particles:false,duration:-1,amplifier:4}],Attributes:[{Base:0,Name:"minecraft:generic.movement_speed"},{Base:0,Name:"minecraft:generic.gravity"},{Base:0,Name:"minecraft:generic.fall_damage_multiplier"},{Base:0,Name:"minecraft:generic.jump_strength"},{Base:0.125,Name:"minecraft:generic.scale"},{Base:1,Name:"minecraft:generic.knockback_resistance"}],NoAI:1b,PersistenceRequired:1b,Size:0,Tags:["balloon.leash","set.score","dont.detect.on.raycast"],DeathLootTable:"",Invulnerable:1b,Team:"noCol",Passengers:[{id:"minecraft:item_display",item:{id:"minecraft:firework_star",count:1,components:{"minecraft:custom_model_data":202400,"minecraft:firework_explosion":{shape:'large_ball',colors:[I; 0]}}},Tags:["balloon.visual","set.transformation"]},{id:"minecraft:interaction",width:1,height:1,response:1,Tags:["balloon.interact"]}]}
+summon pig ~ ~ ~ {Silent:1b,active_effects:[{id:"minecraft:invisibility",show_particles:false,duration:-1,amplifier:0},{id:"minecraft:resistance",show_particles:false,duration:-1,amplifier:4}],Attributes:[{Base:0,Name:"minecraft:generic.movement_speed"},{Base:-0.02,Name:"minecraft:generic.gravity"},{Base:0,Name:"minecraft:generic.fall_damage_multiplier"},{Base:0,Name:"minecraft:generic.jump_strength"},{Base:1,Name:"minecraft:generic.knockback_resistance"}],Tags:["balloon","set.score","dont.detect.on.raycast"],DeathLootTable:""}
+scoreboard players operation @e[type=pig,tag=set.score,distance=..5,limit=1] ballonsID = *CLOUD_ID ballonsID
+scoreboard players operation @e[type=slime,tag=set.score,distance=..5,limit=1] ballonsID = *CLOUD_ID ballonsID
+scoreboard players add *CLOUD_ID ballonsID 1
+data modify entity @e[type=item_display,tag=set.transformation,distance=..5,limit=1] transformation.translation set value [0.0f, 0.5f, 0.0f]
+data modify entity @e[type=item_display,tag=set.transformation,distance=..5,limit=1] item.components."minecraft:firework_explosion".colors[0] set from entity @s data.color
+execute as @e[type=pig,tag=set.score,distance=..5,limit=1] run data modify entity @s leash.UUID set from entity @s UUID
+item replace entity @e[type=pig,tag=set.score,distance=..5,limit=1] armor.head with ghast_spawn_egg[minecraft:custom_model_data=202400]
+data modify entity @e[type=pig,tag=set.score,distance=..5,limit=1] ArmorItems[3].components."minecraft:custom_model_data" set from entity @s data.custom_model_data
+
+tag @e[type=pig,tag=set.score,distance=..5,limit=1] remove set.score
+tag @e[type=slime,tag=set.score,distance=..5,limit=1] remove set.score
+tag @e[type=item_display,tag=set.transformation,distance=..5,limit=1] remove set.transformation

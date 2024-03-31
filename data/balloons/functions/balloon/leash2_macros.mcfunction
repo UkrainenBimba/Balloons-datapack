@@ -1,0 +1,1 @@
+$data modify entity @e[type=slime,tag=save.slime,limit=1] leash set value {UUID:$(player)}

@@ -1,0 +1,14 @@
+function balloons:reset_chat
+
+tellraw @a {"text":"ὠ\n\n\n\n\n","font":"balloons"}
+tellraw @a [{"text":"                  "},{"translate":"balloons.settings_title", "fallback": "SETTINGS","color": "red","bold": false},{"text": "\n"}]
+
+tellraw @a [{"translate":"balloons.settings.max_balloon_flight_height", "fallback": "  ▶ Maximum balloon flight height: ","color": "gold"},{"score":{"name":"*balloonsMaxHeight","objective": "settings"},"color": "green","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_change","color": "gold"}]},"clickEvent": {"action": "suggest_command","value": "/trigger maxBalloonFlightHeight set "}}]
+
+execute if score *changeGravityWithBalloons settings matches 0 run tellraw @a [{"translate":"balloons.settings.change_player_gravity", "fallback": "  ▶ Balloons affect the player's gravity: ","color": "gold"},{"translate":"balloons.settings.off","fallback": "OFF","color": "red","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_change","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/trigger balloonAffectPlayersGravity set 2"}}]
+execute if score *changeGravityWithBalloons settings matches 1 run tellraw @a [{"translate":"balloons.settings.change_player_gravity", "fallback": "  ▶ Balloons affect the player's gravity: ","color": "gold"},{"translate":"balloons.settings.on","fallback": "ON","color": "green","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_change","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/trigger balloonAffectPlayersGravity set 1"}}]
+
+execute if score *changeMobGravityWithBalloons settings matches 0 run tellraw @a [{"translate":"balloons.settings.change_mob_gravity", "fallback": "  ▶ Balloons affect the mob's gravity: ","color": "gold"},{"translate":"balloons.settings.off","fallback": "OFF","color": "red","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_change","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/trigger balloonAffectMobsGravity set 2"}}]
+execute if score *changeMobGravityWithBalloons settings matches 1 run tellraw @a [{"translate":"balloons.settings.change_mob_gravity", "fallback": "  ▶ Balloons affect the mob's gravity: ","color": "gold"},{"translate":"balloons.settings.on","fallback": "ON","color": "green","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_change","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/trigger balloonAffectMobsGravity set 1"}}]
+
+tellraw @a [{"translate":"balloons.settings.go_back", "fallback": "  ▶ Go back","color": "red","hoverEvent": {"action": "show_text","value": [{"translate":"balloons.click_to_open","color": "gold"}]},"clickEvent": {"action": "run_command","value": "/function balloons:main_page"}}]
